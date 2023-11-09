@@ -1,0 +1,230 @@
+.careers-wrapper {
+  position: relative;
+  background-image: url(../../../Assets/images/banner-main.png);
+  background-position: top;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(../../../Assets/images/contactCareer.png);
+    z-index: -1;
+  }
+}
+
+.titleMain {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: bold;
+  font-size: 265px;
+  text-align: center;
+  color: #ec7b15;
+  text-shadow: 25px 20px 18px rgb(8 6 63 / 50%);
+  margin: 0;
+  padding: 10% 0;
+  position: relative;
+}
+
+.careerbanner {
+  position: relative;
+  padding-bottom: 8%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../../Assets/images/careerMan.png");
+    width: 800px;
+    height: 120%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 5%;
+    z-index: 0;
+  }
+
+  .btnPart {
+    text-align: right;
+    padding: 0 145px;
+    position: relative;
+  }
+}
+
+.contactCareer {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-position: center bottom;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    z-index: 0;
+    background-image: url("../../../Assets/images/careerform-bg.png");
+  }
+
+  &_inner {
+    position: relative;
+    z-index: 9;
+    padding: 150px 80px 0;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: end;
+    max-width: 600px;
+
+    .socialMedia {
+      max-width: 340px;
+      text-align: center;
+      margin: 60px 0;
+
+      &_inner {
+        gap: 35px;
+        justify-content: center;
+        margin-top: 100px;
+      }
+    }
+
+    .CustomCheckBox {
+      input {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .careerformGirl {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.formGroup {
+  max-width: 340px;
+  width: 100%;
+  margin-bottom: 30px;
+
+  input {
+    padding: 8px 20px;
+    font-size: 28px;
+    line-height: normal;
+    border-radius: 25px;
+    border: none;
+    background-color: #ffff;
+    height: auto;
+
+    &::placeholder {
+      color: #000000;
+    }
+  }
+
+  fieldset {
+    position: unset;
+    border: none;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1499px) {
+  .titleMain {
+    font-size: 180px;
+  }
+
+  .careerbanner {
+    &::before {
+      height: 100%;
+      right: 0;
+    }
+  }
+
+  .contactCareer {
+    &_inner {
+      // padding: 5% 30px 0;
+      padding: 30px 10px 0;
+    }
+
+    &_form {
+      .socialMedia {
+        margin: 30px 0;
+
+        &_inner {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .careers-wrapper {
+    min-height: unset;
+    background-size: 100%;
+
+    .careerbanner {
+      &::before {
+        width: 30%;
+      }
+
+      .btnPart {
+        padding: 0 10%;
+      }
+    }
+  }
+
+  .titleMain {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .contactCareer {
+    &_inner {
+      flex-direction: column-reverse !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .titleMain {
+    font-size: 60px;
+    padding: 10% 15px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .titleMain {
+    font-size: 36px;
+    text-shadow: 3px 2px 3px rgba(8, 6, 63, 0.5);
+  }
+
+  .contactCareer {
+    &_inner {
+      .MuiGrid-grid-md-6 {
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    .formGroup {
+      margin-bottom: 15px;
+
+      .formControl {
+        max-width: 100%;
+        font-size: 18px;
+        width: -webkit-fill-available;
+        padding: 10px 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .d {
+        fill: url(#b);
+      }
+
+      .e {
+        fill: url(#c);
+      }
+    </style>
+    <linearGradient id="b" x1="-8141.75" y1="-3144.27" x2="-8141.75" y2="-4183.06" gradientTransform="translate(-7181.62 -3121.23) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e1e8ff"/>
+      <stop offset="1" stop-color="#edeeff"/>
+    </linearGradient>
+    <radialGradient id="c" cx="626.98" cy="-264.84" fx="626.98" fy="-264.84" r="707.18" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#364e80"/>
+      <stop offset="1" stop-color="#192c4c"/>
+    </radialGradient>
+  </defs>
+  <rect class="d" x=".27" y="2.87" width="1919.73" height="1079.85"/>
+  <polygon class="e" points="1426.05 1082.72 .27 1082.72 .27 360.43 167.69 2.87 167.71 .95 1920 -1.54 1920 2.87 1920 2.87 1426.05 1082.72"/>
+</svg>

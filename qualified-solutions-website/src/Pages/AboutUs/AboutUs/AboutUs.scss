@@ -1,0 +1,285 @@
+.about-wrapper {
+  // background-color: #edeeff;
+  background-color: #E1E8FF;
+
+  .section-title {
+    margin-bottom: 45px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 21px;
+    line-height: 25px;
+    color: #fff;
+    margin: 0 0 25px 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.container {
+  max-width: 1590px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 9;
+}
+
+.aboutUs-section {
+  padding-top: 250px;
+  position: relative;
+  overflow: hidden;
+
+  &::after,
+  &:before {
+    content: "";
+    position: absolute;
+    transform: rotate(15deg);
+    width: 2530px;
+    height: 1215px;
+    background: linear-gradient(93deg,
+        rgba(54, 78, 128, 1) 0%,
+        rgba(25, 44, 76, 1) 100%);
+    left: -19%;
+    top: -33%;
+    z-index: 1;
+  }
+
+  &::after {
+    background: #325895;
+    top: -27%;
+    z-index: 0;
+  }
+}
+
+.spaceBetweenBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ourMission-section {
+  margin-bottom: 180px;
+
+  .section-title,
+  p {
+    &:first-child {
+      font-family: "Rajdhani", sans-serif;
+    }
+
+    color: #325895;
+  }
+
+  .contentBox {
+    margin-top: 80px;
+  }
+
+  .OurMission {
+    margin-top: -300px;
+  }
+}
+
+.whyChoose-section {
+  background-color: #e1e8ff;
+  padding-bottom: 60px;
+
+  .section-title,
+  p {
+    color: #325895;
+  }
+
+  .contentBox {
+    margin-top: 80px;
+  }
+
+  .WhyChoose {
+    margin-top: -120px;
+  }
+}
+
+.about-bottom {
+  position: relative;
+  overflow: hidden;
+  padding-top: 150px;
+  padding-bottom: 180px;
+  background-color: #e1e8ff;
+
+  &::after,
+  &:before {
+    content: "";
+    position: absolute;
+    transform: rotate(12deg);
+    width: 2900px;
+    height: 1420px;
+    background: linear-gradient(93deg,
+        rgba(54, 78, 128, 1) 0%,
+        rgba(25, 44, 76, 1) 100%);
+    left: -14%;
+    top: 30%;
+    z-index: 1;
+  }
+
+  &::after {
+    background: #325895;
+    top: 24%;
+    z-index: 0;
+  }
+
+  .AboutBottomImg {
+    margin-bottom: 70px;
+
+    img {
+      width: 100%;
+      margin-top: -150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .aboutUs-section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .about-wrapper {
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: normal;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .AboutImg,
+  .OurMissionImg,
+  .WhyChooseImg {
+    img {
+      width: 100%;
+    }
+  }
+
+  .ourMission-section {
+    margin-bottom: 10%;
+
+    .OurMission {
+      margin-top: -10%;
+    }
+  }
+
+  .whyChoose-section {
+    .WhyChoose {
+      margin-top: -10%;
+    }
+  }
+
+  .about-bottom {
+    padding-top: 0;
+    padding-bottom: 50px;
+
+    &::after,
+    &::before {
+      transform: rotate(14deg);
+      left: -100%;
+    }
+
+    .AboutBottomImg {
+      margin-bottom: 30px;
+
+      img {
+        margin-top: 50px;
+      }
+    }
+
+    .spaceBetweenBox {
+      img {
+        max-width: 250px;
+        width: 100%;
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .whyChoose-section {
+    .contentBox {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .ourMission-section,
+  .aboutUs-section,
+  .whyChoose-section {
+    .MuiGrid-root {
+      width: 100%;
+      padding: 0 !important;
+      margin: auto;
+    }
+  }
+
+  .aboutUs-section {
+    .contentBox {
+      margin-top: 20px;
+    }
+
+    .section-title,
+    p {
+      color: #325895;
+    }
+  }
+
+  .ourMission-section {
+    margin-bottom: 30px;
+
+    .contentBox {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .OurMissionImg {
+      width: 100%;
+
+      .OurMission {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .whyChoose-section {
+    .WhyChoose {
+      margin-top: 0;
+    }
+  }
+
+  .about-bottom {
+    padding-bottom: 30px;
+
+    &::after,
+    &::before {
+      left: -220%;
+    }
+  }
+
+  .about-wrapper {
+    .section-title {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .spaceBetweenBox {
+    flex-direction: column;
+  }
+}

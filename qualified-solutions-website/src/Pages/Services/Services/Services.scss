@@ -1,0 +1,246 @@
+.tabBox {
+  display: flex;
+
+  //   min-height: 100vh;
+  &_innerLeft {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+
+    .MuiTabs-indicator {
+      display: none;
+    }
+
+    .MuiTabs-flexContainer {
+      display: block;
+      white-space: break-spaces;
+      padding: 30px;
+
+      button {
+        width: 100%;
+        max-width: 100% !important;
+        padding: 15px;
+        min-height: unset;
+        margin-top: 15px;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 28px;
+        line-height: normal;
+        color: #192c4c;
+        letter-spacing: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+        font-weight: 700;
+        text-align: left;
+        gap: 25px;
+        text-transform: none;
+
+        svg {
+          width: 24px;
+          height: auto;
+          color: #325898;
+
+          g,
+          path {
+            stroke: #325898;
+            fill: #325898;
+            color: #325898;
+          }
+        }
+
+        &.Mui-selected {
+          svg {
+            color: #ef7b15;
+
+            path,
+            g {
+              color: #ef7b15;
+              fill: #ef7b15;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_innerRight {
+    width: calc(100% - 700px);
+    color: #fff;
+    background-image: url("../../../Assets/images/Empty.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba(25, 44, 76, 0.85);
+      z-index: 0;
+    }
+  }
+}
+
+.tabbingContent {
+  height: 100%;
+  max-width: 690px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.ContentBox {
+  &_header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &_body {
+    margin-top: 60px;
+
+    p {
+      color: #fff;
+      margin-bottom: 20px;
+      margin-top: 0;
+      font-size: 22px;
+      line-height: 26px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .section-title {
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1499px) {
+  .tabBox {
+    &_innerLeft {
+      max-width: 600px;
+
+      .MuiTabs-flexContainer {
+        button {
+          padding: 5px 15px;
+          margin-top: 5px;
+          font-size: 22px;
+          line-height: normal;
+        }
+      }
+    }
+
+    &_innerRight {
+      width: calc(100% - 600px);
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .tabBox {
+    &_innerLeft {
+      max-width: 35%;
+
+      .MuiTabs-flexContainer {
+        padding: 15px;
+
+        button {
+          font-size: 18px;
+          text-align: left;
+        }
+      }
+    }
+
+    &_innerRight {
+      width: calc(100% - 35%);
+    }
+  }
+
+  .tabbingContent {
+    padding: 10px 25px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .ContentBox {
+    &_header {
+      gap: 20px;
+
+      img {
+        max-width: 80px;
+      }
+    }
+
+    &_body {
+      margin-top: 30px;
+
+      p {
+        font-size: 18px;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .tabBox {
+    flex-direction: column;
+
+    &_innerLeft {
+      max-width: 100%;
+
+      .MuiTabs-flexContainer {
+        display: flex;
+        overflow: auto;
+        width: 100%;
+
+        button {
+          width: auto;
+          padding: 0 15px;
+          margin: 0;
+          white-space: nowrap;
+          gap: 10px;
+        }
+      }
+    }
+
+    &_innerRight {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .tabbingContent {
+    padding: 20px 15px;
+  }
+
+  .ContentBox {
+    &_header {
+      img {
+        max-width: 50px;
+      }
+
+      .section-title {
+        margin-bottom: 0;
+      }
+    }
+
+    &_body {
+      margin-top: 20px;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
